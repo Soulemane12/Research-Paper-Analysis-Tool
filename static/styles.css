@@ -1,0 +1,138 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+h1, h2 {
+    color: #333;
+}
+
+form {
+    margin-bottom: 20px;
+}
+
+div {
+    background: #f4f4f4;
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+pre {
+    background: #e8e8e8;
+    padding: 5px;
+    border-left: 3px solid #ccc;
+}
+
+.error {
+    color: #721c24;
+    background-color: #f8d7da;
+    border: 1px solid #f5c6cb;
+    padding: 10px;
+    border-radius: 4px;
+    margin: 10px 0;
+}
+
+.cross-references {
+    margin-top: 2em;
+    padding: 1em;
+    background-color: #f8f9fa;
+    border-radius: 4px;
+}
+
+.cross-reference {
+    margin-bottom: 2em;
+    padding: 1em;
+    border: 1px solid #dee2e6;
+    border-radius: 4px;
+}
+
+.claim {
+    font-size: 1.1em;
+    margin-bottom: 1em;
+    padding: 0.5em;
+    background-color: #e9ecef;
+    border-radius: 4px;
+}
+
+.supporting-evidence {
+    margin: 1em 0;
+    padding-left: 1em;
+    border-left: 4px solid #28a745;
+}
+
+.contradicting-evidence {
+    margin: 1em 0;
+    padding-left: 1em;
+    border-left: 4px solid #dc3545;
+}
+
+.evidence {
+    margin: 0.5em 0;
+    padding: 0.5em;
+    background-color: white;
+    border-radius: 4px;
+}
+
+.similarity {
+    color: #6c757d;
+    font-size: 0.9em;
+}
+
+.discourse-graph {
+    margin-top: 2em;
+    padding: 1em;
+    background-color: #f8f9fa;
+    border-radius: 4px;
+}
+
+#graph-container {
+    width: 100%;
+    height: 600px;
+    background-color: white;
+    border: 1px solid #dee2e6;
+    border-radius: 4px;
+}
+
+.discourse-graph svg {
+    background-color: white;
+}
+
+.discourse-graph .legend text {
+    font-size: 12px;
+    font-family: sans-serif;
+}
+
+.discourse-graph .legend line {
+    stroke-width: 2px;
+}
+
+.discourse-graph text {
+    font-size: 10px;
+    font-family: sans-serif;
+}
+
+.discourse-graph circle {
+    stroke: #fff;
+    stroke-width: 1.5px;
+}
+
+.discourse-graph line {
+    stroke-opacity: 0.6;
+}
+
+.result, .cross-reference {
+    transition: background-color 0.3s ease;
+}
+
+.highlight {
+    background-color: #fff3cd;
+    border-left: 4px solid #ffc107;
+}
+
+.discourse-graph g {
+    cursor: pointer;
+}
+
+html {
+    scroll-behavior: smooth;
+}

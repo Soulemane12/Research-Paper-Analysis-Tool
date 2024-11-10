@@ -1,0 +1,54 @@
+[
+    {
+        "research_question": "Does oxytocin increase trust in humans?",
+        "claims": [
+            "Intranasal oxytocin does not reliably increase trust in humans.",
+            "Studies measuring peripheral oxytocin levels are methodologically flawed, undermining the reliability of reported associations with trust."
+        ],
+        "evidence": [
+            "Multiple studies attempting to replicate the initial findings have failed to show a significant effect of intranasal oxytocin on trust game investments. A meta-analysis of seven studies (comprising data from 481 subjects) found that the combined effect size of intranasal oxytocin on trust was small and not reliably different from zero.",
+            "Many studies measuring oxytocin levels in plasma have not used necessary extraction methods, leading to inaccurate measurements. For instance, unextracted plasma measurements overestimate oxytocin levels and yield unreliable associations. When proper bioanalytically valid methods are used, studies do not find correlations between plasma oxytocin and trust."
+        ],
+        "claim_with_context": "Claim: Intranasal oxytocin does not reliably increase trust in humans. Context: The initial study by Kosfeld et al. (2005) reported that intranasal oxytocin increased trust in humans, as measured by investment in a trust game. However, subsequent replication attempts have failed to reproduce this effect. A meta-analysis of all intranasal oxytocin trust game experiments revealed that the combined effect size was small and not significantly different from zero. This suggests that the original finding may not be robust, and intranasal oxytocin does not significantly influence trust behavior in humans.",
+        "filename": "nave2015.pdf"
+    },
+    {
+        "research_question": "Does oxytocin increase trust in humans?",
+        "claims": [
+            "The cumulative evidence does not provide robust convergent evidence that human trust is reliably associated with oxytocin (or caused by it).",
+            "The initial findings associating intranasal oxytocin with increased trust have not replicated well."
+        ],
+        "evidence": [
+            "Meta-analysis of intranasal oxytocin trust game experiments showed that the combined effect size of oxytocin on trust was small and not reliably different from zero.",
+            "Methodological concerns exist regarding the measurement of peripheral oxytocin levels and the bioanalytic validity of assay methods, undermining studies linking oxytocin levels with trust."
+        ],
+        "claim_with_context": "Unfortunately, the simplest promising finding associating intranasal OT with higher trust has not replicated well. The initial study by Kosfeld et al. (2005) suggested a causal link between oxytocin and trust in humans, but subsequent replication attempts failed to produce consistent results.",
+        "filename": "NaveCamererMcCullough15.pdf"
+    },
+    {
+        "research_question": "Does intranasal administration of oxytocin increase trust in humans, specifically in social interactions?",
+        "claims": [
+            "Intranasal administration of oxytocin significantly increases trust among humans.",
+            "Oxytocin's effect on trust is specific to social risks in interpersonal interactions and is not due to a general increase in risk-taking behavior."
+        ],
+        "evidence": [
+            "In a double-blind, placebo-controlled experiment using a trust game, subjects who received oxytocin showed a 17% higher average transfer to trustees compared to those who received placebo.",
+            "In a risk experiment where risk was not generated through social interaction, oxytocin did not affect the investors' behavior, suggesting that oxytocin specifically affects social trust."
+        ],
+        "claim_with_context": "Intranasal administration of oxytocin significantly increases trust among humans. This is based on a double-blind study where subjects given oxytocin displayed higher levels of trust in a trust game involving real monetary stakes compared to those given a placebo. The increased trust was specific to social interactions, as oxytocin did not impact behavior in a nonsocial risk task.",
+        "filename": "Kosfeld20Nature202005.pdf"
+    },
+    {
+        "research_question": "Does intranasal administration of oxytocin increase trusting behavior in the trust game under conditions of minimal social contact compared to no-contact conditions?",
+        "claims": [
+            "Intranasal oxytocin increases trust in humans when minimal social contact is established between interaction partners.",
+            "The effect of oxytocin on trust is context-dependent and is more pronounced with minimal social contact than without social contact."
+        ],
+        "evidence": [
+            "The initial study by Kosfeld et al. (2005) showed that oxytocin increased trusting decisions in the trust game under minimal social contact conditions.",
+            "Subsequent studies that failed to replicate the oxytocin effect on trust did not implement minimal social contact, suggesting the importance of social cues for oxytocin's influence on trust."
+        ],
+        "claim_with_context": "Because animal research has documented that oxytocin is primarily a social bonding hormone that activates socio-emotional neural pathways in the brain, we would also expect the effect of oxytocin in humans to be limited to social situations where initiating or establishing partnership is important to realize synergy.",
+        "filename": "Stage_1_RegisteredReport_FEHR_protocol.pdf"
+    }
+]

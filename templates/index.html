@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Research Insights</title>
+  <link rel="stylesheet" href="/static/styles.css">
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+  <script src="/static/js/discourse-graph.js"></script>
+</head>
+<body>
+  <h1>Research Paper Insights</h1>
+  <form action="/" method="post" enctype="multipart/form-data">
+    <input type="file" name="files" multiple accept=".pdf">
+    <button type="submit">Upload and Analyze</button>
+  </form>
+  <h2>Total Papers Processed: {{ count }}</h2>
+  
+  <div>
+    {% for result in results %}
+      <div class="result" data-paper="{{ result.filename }}">
+        <h3>{{ result.filename }}</h3>
+        {% if result.error %}
+          <p class="error">Error: {{ result.error }}</p>
+        {% else %}
+          <p class="research-question"><strong>Research Question:</strong> {{ result.research_question }}</p>
+          <p><strong>Claims:</strong></p>
+          <ul>
+            {% for claim in result.claims %}
+              <li class="claim">{{ claim }}</li>
+            {% endfor %}
+          </ul>
+          <p><strong>Evidence:</strong></p>
+          <ul>
+            {% for ev in result.evidence %}
+              <li class="evidence">{{ ev }}</li>
+            {% endfor %}
+          </ul>
+          <p class="claim-context"><strong>Claim with Context:</strong> {{ result.claim_with_context }}</p>
+        {% endif %}
+      </div>
+    {% endfor %}
+  </div>
+
+  <div class="cross-references">
+    <h2>Cross-Referenced Claims</h2>
+    {% for ref in cross_references %}
+        <div class="cross-reference">
+            <h3>From {{ ref.source_paper }}</h3>
+            <p class="claim"><strong>Claim:</strong> {{ ref.claim }}</p>
+            
+            {% if ref.supporting_evidence %}
+                <div class="supporting-evidence">
+                    <h4>Supporting Evidence:</h4>
+                    {% for evidence in ref.supporting_evidence %}
+                        <div class="evidence">
+                            <p><strong>From {{ evidence.paper }}:</strong></p>
+                            <p>{{ evidence.evidence }}</p>
+                        </div>
+                    {% endfor %}
+                </div>
+            {% endif %}
+            
+            {% if ref.contradicting_evidence %}
+                <div class="contradicting-evidence">
+                    <h4>Contradicting Evidence:</h4>
+                    {% for evidence in ref.contradicting_evidence %}
+                        <div class="evidence">
+                            <p><strong>From {{ evidence.paper }}:</strong></p>
+                            <p>{{ evidence.evidence }}</p>
+                        </div>
+                    {% endfor %}
+                </div>
+            {% endif %}
+        </div>
+    {% endfor %}
+  </div>
+
+  <div class="discourse-graph">
+    <h2>Discourse Graph</h2>
+    <div id="graph-container"></div>
+  </div>
+
+  <script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const container = document.getElementById('graph-container');
+    const graph = new DiscourseGraph(container);
+    
+    // Load the discourse graph data
+    fetch('/discourse-graph')
+        .then(response => response.json())
+        .then(data => graph.render(data));
+  });
+  </script>
+</body>
+</html>
